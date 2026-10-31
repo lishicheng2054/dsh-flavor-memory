@@ -138,7 +138,20 @@ export function doctor({ dshHome = dshHomeDefault(), profile = 'desktop', packag
   let config = null;
   try {
     config = extractFlavorConfig(pkg.patch);
-    add('patch', Boolean(config), config ? `${config.characterId || '(no characterId)'}` : 'flavor-memory config block not found');
+    let source = 'profile';
+    if (!config) {
+      const bundledPatch = join(pkg.dir, 'node_modules', 'dsh-flavor-memory', 'cordis.patch.yml');
+      if (existsSync(bundledPatch)) {
+        config = extractFlavorConfig(readFileSync(bundledPatch, 'utf8'));
+        if (config) source = 'package-default';
+      }
+    }
+    if (config) {
+      const label = config.characterId || '(no characterId)';
+      add('patch', true, source === 'package-default' ? `${label} (package default; run setup to customize)` : label);
+    } else {
+      add('patch', false, 'flavor-memory config block not found in profile patch or installed package');
+    }
   } catch (error) {
     add('patch', false, error.message);
   }

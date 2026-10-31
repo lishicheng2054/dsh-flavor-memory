@@ -181,7 +181,7 @@ node .\node_modules\dsh-flavor-memory\src\setup.mjs setup --profile flavor-test 
 **A. Release 直链（最省事，粘这一行）**
 
 ```text
-https://github.com/lishicheng2054/dsh-flavor-memory/releases/download/v0.4.2/dsh-flavor-memory-0.4.2.tgz
+https://github.com/lishicheng2054/dsh-flavor-memory/releases/download/v0.4.3/dsh-flavor-memory-0.4.3.tgz
 ```
 
 **B. Git 地址**
@@ -193,12 +193,12 @@ git+https://github.com/lishicheng2054/dsh-flavor-memory.git
 **C. 本地 tgz（先下载再填绝对路径）**
 
 ```text
-C:\Users\you\Downloads\dsh-flavor-memory-0.4.2.tgz
+C:\Users\you\Downloads\dsh-flavor-memory-0.4.3.tgz
 ```
 
 Release 页面：https://github.com/lishicheng2054/dsh-flavor-memory/releases
 
-校验值（SHA-256）：`18263F434E2065D325A65CBD0E39F503B9A44D430E0EA3FF0EF5A24DFC92E9EC`
+校验值（SHA-256）：`FA3BA5F429E75B46C97A50E9A7DEF26595FAD022C0C8E31754A4009252965E9F`
 
 装完后仍按下面的「2. 配置角色」写人格配置；或直接跑 `npm run setup` 自动生成。
 
@@ -413,7 +413,7 @@ QQ / NoneBot / NapCat 这类适配层可能在网络重试时重复发送同一�
 `test` 是确定性主套件；`test:stress` 会实际启动多进程 JSON 写入。JSON 路径按单写者设计，压力脚本只验证“文件仍可解析、没有被写坏”，不承诺多个写者都不丢事实。多写场景请用单写者服务或 SQLite 事务。
 
 
-当前结果：**161 tests / 161 pass / 0 fail**（本机 Node 22.23.2，2026-10-31，0.4.2）。0.4.2 给 package.json 加了插件图标；0.4.1 补了 CI、上架材料和图标；0.4.0 把预算裁剪改为逐条丢弃，并给语气样例做敏感词过滤；0.3.9 增加身份事实抽取（生日/忌口/职业/宠物/纪念日）和真人盲测工具包；0.3.8 把场景卡改为按问题相关性排序，并给命中加了近似去重；0.3.7 做了 IDF 加权、精确命中去重、`maxPromptChars` 硬预算，300 轮注入占比 19.4% → 18.7%。0.3.6 加入精简语气样例：从已有历史挑最近 3 条 40 字以内的角色回复，只学句长和口癖；提示词约 +8%，300 轮整体占比 17.1% → 19.4%。0.3.5 修了两处：命中片段按问题裁剪（代码层），策略压缩并补上“只给相关那一句、不写解释句”。0.3.4 只改文档与基准脚本，运行行为与 0.3.3 相同。0.3.3 在 0.3.2 基础上补了两条提示词层约束：礼物/承诺必须逐字保留原文主语和方向（“我送你的”不能写成“我送过你”），以及最小披露（只回答被问到的内容，不主动展开未被询问的隐私、药物、地址等细节）；同时把自定义 `DSH_HOME` 下的默认记忆/角色卡路径对齐到 `$DSH_HOME/flavor-memory`，并补了 5 项路径回归。0.3.2 补的是：会话 scope 自动发现与切换、scope 内原文搜索/完整读取/保护、事实历史浏览、全量备份恢复，以及备份导入放宽到 64 MB 并验证超限返回 413。界面继续使用浅色主题，并补了 scope 胶囊、窄屏滚动条和压缩指标真实性断言。
+当前结果：**162 tests / 162 pass / 0 fail**（本机 Node 22.23.2，2026-10-31，0.4.3）。0.4.3 让「添加插件」直接填 Release URL 就能零配置跑起来，并修好了 doctor 对包内默认配置的误判；0.4.2 给 package.json 加了插件图标；0.4.1 补了 CI、上架材料和图标；0.4.0 把预算裁剪改为逐条丢弃，并给语气样例做敏感词过滤；0.3.9 增加身份事实抽取（生日/忌口/职业/宠物/纪念日）和真人盲测工具包；0.3.8 把场景卡改为按问题相关性排序，并给命中加了近似去重；0.3.7 做了 IDF 加权、精确命中去重、`maxPromptChars` 硬预算，300 轮注入占比 19.4% → 18.7%。0.3.6 加入精简语气样例：从已有历史挑最近 3 条 40 字以内的角色回复，只学句长和口癖；提示词约 +8%，300 轮整体占比 17.1% → 19.4%。0.3.5 修了两处：命中片段按问题裁剪（代码层），策略压缩并补上“只给相关那一句、不写解释句”。0.3.4 只改文档与基准脚本，运行行为与 0.3.3 相同。0.3.3 在 0.3.2 基础上补了两条提示词层约束：礼物/承诺必须逐字保留原文主语和方向（“我送你的”不能写成“我送过你”），以及最小披露（只回答被问到的内容，不主动展开未被询问的隐私、药物、地址等细节）；同时把自定义 `DSH_HOME` 下的默认记忆/角色卡路径对齐到 `$DSH_HOME/flavor-memory`，并补了 5 项路径回归。0.3.2 补的是：会话 scope 自动发现与切换、scope 内原文搜索/完整读取/保护、事实历史浏览、全量备份恢复，以及备份导入放宽到 64 MB 并验证超限返回 413。界面继续使用浅色主题，并补了 scope 胶囊、窄屏滚动条和压缩指标真实性断言。
 
 `test:stress` 是单独的压力脚本，不包含在 161 项主套件结果中。
 
@@ -625,7 +625,7 @@ start benchmark\blind\human-kit\index.html
 - 上架材料：`docs/store-listing.md`（简介、配置、亮点、限制、截图位）。
 - 图标：`assets/icon.svg`。
 - 本地一键检查：`npm run check`。
-- GitHub：仓库 https://github.com/lishicheng2054/dsh-flavor-memory ，Release `v0.4.2` 提供可直装 tgz。
+- GitHub：仓库 https://github.com/lishicheng2054/dsh-flavor-memory ，Release `v0.4.3` 提供可直装 tgz。
 - npm（可选）：`npm run publish:check` 先 dry-run；有 npm 账号再执行 `npm run publish:now`。
 
 ## 参考

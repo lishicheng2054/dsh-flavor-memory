@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.3 — 2026-10-31
+
+- 插件页直接「添加插件」（填 Release tgz URL / Git 地址）后即可零配置运行，无需先跑 setup。
+- 修复 doctor 判定：profile patch 没有配置块时，回退读取包内 `cordis.patch.yml` 默认配置，并标注 "package default; run setup to customize"。
+- 修复 `findFlavorBlock` 无法识别 `- insert:` 嵌套列表里缩进的 `- id: flavor-memory` 块。
+- 新增回归测试（package-default 配置场景），测试数 161 → 162。
+
 ## 0.4.2 — 2026-10-31
 
 - 在 package.json 增加 `icon` 字段，DSH 插件页可直接显示图标。

@@ -1,6 +1,6 @@
 {
   "name": "dsh-flavor-memory",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "DSH / OpenAI-compatible flavor-preserving memory with SillyTavern character cards, retrieval-first worldbook, controlled evolution and a polished light-theme studio.",
   "type": "module",
   "main": "src/dsh-plugin.mjs",

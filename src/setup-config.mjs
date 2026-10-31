@@ -4,7 +4,7 @@ import { join } from 'node:path';
 const MANAGED_START = '# >>> dsh-flavor-memory managed config (rerun setup to replace this block)';
 const MANAGED_END = '# <<< dsh-flavor-memory managed config';
 const PLUGIN_ID = 'flavor-memory';
-const FLAVOR_BLOCK_PATTERN = /^-\s+id:\s*["']?flavor-memory["']?\s*$/m;
+const FLAVOR_BLOCK_PATTERN = /^([ \t]*)-[ \t]+id:[ \t]*["']?flavor-memory["']?[ \t]*$/m;
 
 function requiredText(value, field, fallback = '') {
   const text = String(value ?? fallback).trim();
@@ -128,12 +128,15 @@ export function findFlavorBlock(text) {
   }
   const match = FLAVOR_BLOCK_PATTERN.exec(source);
   if (!match) return null;
+  const indent = match[1].length;
   const start = source.lastIndexOf('\n', match.index) + 1;
   const starts = lineStarts(source);
   let end = source.length;
   for (const candidate of starts) {
     if (candidate <= start) continue;
-    if (/^-\s+/.test(source.slice(candidate))) {
+    const line = source.slice(candidate);
+    const sibling = /^([ \t]*)-[ \t]+/.exec(line);
+    if (sibling && sibling[1].length <= indent) {
       end = candidate;
       break;
     }

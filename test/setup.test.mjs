@@ -139,6 +139,45 @@ test('doctor checks a complete local profile without requiring a live DSH proces
   assert.equal(report.checks.find(item => item.name === 'dsh-cli')?.ok, true);
 });
 
+test('doctor accepts a package-default config when the profile patch has no block', t => {
+  const root = mkdtempSync(join(tmpdir(), 'flavor-doctor-default-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  const profileDir = join(root, 'profiles', 'test');
+  const packageDir = join(profileDir, 'node_modules', 'dsh-flavor-memory');
+  mkdirSync(packageDir, { recursive: true });
+  const packageJson = ensureProfilePackage({
+    name: 'profile', dependencies: {}, dsh: { profile: { bundles: [] } },
+  }, { dependencySpec: 'https://example.invalid/dsh-flavor-memory-0.4.3.tgz' }).packageJson;
+  writeFileSync(join(profileDir, 'package.json'), JSON.stringify(packageJson), 'utf8');
+  writeFileSync(join(profileDir, 'cordis.patch.yml'), '[]', 'utf8');
+  writeFileSync(join(packageDir, 'cordis.patch.yml'), [
+    '# dsh-flavor-memory bundle patch.',
+    '- insert:',
+    '    - id: flavor-memory',
+    '      name: dsh-flavor-memory',
+    '      config:',
+    '        characterId: ayu',
+    '        soul: "嘴硬心软"',
+    '        dataFile: ~/.dsh/flavor-memory/memory.json',
+    '        voice:',
+    '          - 短句',
+    '',
+  ].join('\n'), 'utf8');
+  const report = doctor({
+    dshHome: root,
+    profile: 'test',
+    packageRoot: process.cwd(),
+    dshExecutable: null,
+    runDsh: false,
+  });
+  assert.equal(report.errors.length, 0, JSON.stringify(report.errors));
+  const patch = report.checks.find(item => item.name === 'patch');
+  assert.equal(patch.ok, true);
+  assert.match(patch.detail, /package default/);
+  assert.equal(report.checks.find(item => item.name === 'soul')?.ok, true);
+  assert.deepEqual(report.config?.voice, ['短句']);
+});
+
 test('doctor forwards a custom DSH_HOME when invoking the DSH CLI', () => {
   const source = fs.readFileSync(new URL('../src/setup.mjs', import.meta.url), 'utf8');
   assert.match(source, /runDshCheck\(cli, profile, dshHome\)/);
