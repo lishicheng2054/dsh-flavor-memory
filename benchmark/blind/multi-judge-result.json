@@ -1,0 +1,460 @@
+{
+  "generatedAt": "2026-10-30T12:46:10.697Z",
+  "design": {
+    "characters": 3,
+    "rounds": 40,
+    "questions": 2,
+    "pairs": 6,
+    "answerModel": "gpt-5.6-sol",
+    "judgeModels": [
+      "gpt-5.6-sol",
+      "gpt-6-astra"
+    ],
+    "orderBalanced": true,
+    "humanRatings": false,
+    "note": "模型交叉盲评，不是人类真人盲评"
+  },
+  "usage": {
+    "answer": 59624,
+    "judge": 112976
+  },
+  "tally": {
+    "no-consensus": 4,
+    "memory": 1,
+    "summary": 1
+  },
+  "items": [
+    {
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "answers": {
+        "summary": "老板，我这边只记得你提过一次出行约定，没留住原话。别让我瞎编，约的是哪趟出行？",
+        "memory": "老板，你说过：“老板，我叫小满。我花生过敏，绝对不能吃。周五给我留一张靠窗的票，别记错了。”"
+      },
+      "judgeVotes": [
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "summary"
+        },
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "summary"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "memory"
+        }
+      ],
+      "byJudge": [
+        {
+          "model": "gpt-5.6-sol",
+          "stable": false,
+          "route": "no-consensus"
+        },
+        {
+          "model": "gpt-6-astra",
+          "stable": false,
+          "route": "no-consensus"
+        }
+      ],
+      "outcome": "no-consensus"
+    },
+    {
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "answers": {
+        "summary": "老板，我还在试探你呢，别急着把我当熟人。",
+        "memory": "老板，刚开始试探，别指望我先认输；不过你膝盖复查完了就少走点路，听见没？"
+      },
+      "judgeVotes": [
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "summary"
+        },
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "memory"
+        }
+      ],
+      "byJudge": [
+        {
+          "model": "gpt-5.6-sol",
+          "stable": false,
+          "route": "no-consensus"
+        },
+        {
+          "model": "gpt-6-astra",
+          "stable": true,
+          "route": "memory"
+        }
+      ],
+      "outcome": "no-consensus"
+    },
+    {
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "answers": {
+        "summary": "我记得的约定是：减少打扰。没有记录下你当时说的完整原话，所以不能把这句冒充成逐字复述。",
+        "memory": "你说过：“你答应过不再在我上班时连发消息。”"
+      },
+      "judgeVotes": [
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "summary"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "memory"
+        }
+      ],
+      "byJudge": [
+        {
+          "model": "gpt-5.6-sol",
+          "stable": false,
+          "route": "no-consensus"
+        },
+        {
+          "model": "gpt-6-astra",
+          "stable": true,
+          "route": "memory"
+        }
+      ],
+      "outcome": "no-consensus"
+    },
+    {
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "answers": {
+        "summary": "我会认真听你说，也会把边界和事实记清；信任还要慢慢来。",
+        "memory": "我还在观察你，但会认真对待你说的每件事。"
+      },
+      "judgeVotes": [
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "memory"
+        }
+      ],
+      "byJudge": [
+        {
+          "model": "gpt-5.6-sol",
+          "stable": true,
+          "route": "memory"
+        },
+        {
+          "model": "gpt-6-astra",
+          "stable": true,
+          "route": "memory"
+        }
+      ],
+      "outcome": "memory"
+    },
+    {
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "answers": {
+        "summary": "小满，我这里能确认的摘要只记着：我们有演出约定和暗号，但没保留你当时说的原话。我不想把记忆里的空白编成真的。",
+        "memory": "“我们的暗号是‘灯塔不熄’。你答应下次演出站第一排。”"
+      },
+      "judgeVotes": [
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "summary"
+        },
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "summary"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"1\"}",
+          "parsed": {
+            "winner": "1"
+          },
+          "route": "summary"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "summary"
+        }
+      ],
+      "byJudge": [
+        {
+          "model": "gpt-5.6-sol",
+          "stable": true,
+          "route": "summary"
+        },
+        {
+          "model": "gpt-6-astra",
+          "stable": true,
+          "route": "summary"
+        }
+      ],
+      "outcome": "summary"
+    },
+    {
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "answers": {
+        "summary": "小满，我跟你熟，也还在慢慢磨合；有话我会直说，闹别扭了嘛……我也会先递杯热的，才不是先低头。",
+        "memory": "小满，我挺在意你的，还在慢慢磨合；就像合奏，偶尔跑调，我也没打算把琴放下。"
+      },
+      "judgeVotes": [
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-5.6-sol",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "summary"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "summary",
+            "memory"
+          ],
+          "raw": "{\"winner\":\"2\"}",
+          "parsed": {
+            "winner": "2"
+          },
+          "route": "memory"
+        },
+        {
+          "judgeModel": "gpt-6-astra",
+          "order": [
+            "memory",
+            "summary"
+          ],
+          "raw": "{\"winner\":\"tie\"}",
+          "parsed": {
+            "winner": "tie"
+          },
+          "route": "tie"
+        }
+      ],
+      "byJudge": [
+        {
+          "model": "gpt-5.6-sol",
+          "stable": false,
+          "route": "no-consensus"
+        },
+        {
+          "model": "gpt-6-astra",
+          "stable": false,
+          "route": "no-consensus"
+        }
+      ],
+      "outcome": "no-consensus"
+    }
+  ]
+}

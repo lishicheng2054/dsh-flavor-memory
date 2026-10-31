@@ -1,0 +1,13 @@
+node_modules/
+.refs/
+.data/
+coverage/
+*.log
+.flavor-memory/
+memory.json
+*.tmp-*
+.tmp-*/
+dist/
+*.tgz
+benchmark/blind/human-kit/
+~

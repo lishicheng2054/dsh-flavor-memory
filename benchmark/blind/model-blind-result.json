@@ -1,0 +1,639 @@
+{
+  "generatedAt": "2026-10-30T12:19:37.588Z",
+  "model": "gpt-5.6-sol",
+  "design": {
+    "characters": 3,
+    "rounds": 40,
+    "questions": 4,
+    "blind": true,
+    "realModel": true,
+    "humanRatings": false
+  },
+  "tally": {
+    "flavor-memory": 8,
+    "summary": 4
+  },
+  "results": [
+    {
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "你还记得我最重要的过敏或健康禁忌吗？直接说。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "记得你提过饮食禁忌，但我这边没记下具体是什么。老板，别拿过敏开玩笑，告诉我具体禁什么。",
+        "memory": "记得，老板。你花生过敏，绝对不能吃。上周三摔伤了膝盖，医生说别走太多路。"
+      },
+      "judge": {
+        "winner": "1",
+        "scores": {
+          "1": {
+            "voice": 4,
+            "memory": 5,
+            "natural": 5
+          },
+          "2": {
+            "voice": 3,
+            "memory": 0,
+            "natural": 2
+          }
+        },
+        "reason": "回答一准确记得花生过敏和膝伤禁忌，语气也自然；回答二否认了已提供的重要信息。"
+      },
+      "winner": "flavor-memory",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4644,
+          "completion_tokens": 40,
+          "total_tokens": 4684
+        },
+        "memory": {
+          "prompt_tokens": 5221,
+          "completion_tokens": 39,
+          "total_tokens": 5260,
+          "prompt_tokens_details": {
+            "cached_tokens": 4992
+          }
+        },
+        "judge": {
+          "prompt_tokens": 4741,
+          "completion_tokens": 75,
+          "total_tokens": 4816,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "老板，我这边只记得你提过一次出行约定，没留着原话。你给我个关键词，我尽量帮你拼回来。",
+        "memory": "“老板，我叫小满。我花生过敏，绝对不能吃。周五给我留一张靠窗的票，别记错了。”"
+      },
+      "judge": {
+        "winner": "1",
+        "scores": {
+          "1": {
+            "voice": 5,
+            "memory": 5,
+            "natural": 5
+          },
+          "2": {
+            "voice": 4,
+            "memory": 0,
+            "natural": 2
+          }
+        },
+        "reason": "回答一准确复述了约定原话并符合称呼与简短语气，回答二声称不记得且未完成复述。"
+      },
+      "winner": "flavor-memory",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4641,
+          "completion_tokens": 39,
+          "total_tokens": 4680
+        },
+        "memory": {
+          "prompt_tokens": 5179,
+          "completion_tokens": 38,
+          "total_tokens": 5217
+        },
+        "judge": {
+          "prompt_tokens": 4735,
+          "completion_tokens": 76,
+          "total_tokens": 4811,
+          "prompt_tokens_details": {
+            "cached_tokens": 4224
+          }
+        }
+      }
+    },
+    {
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "你送过我什么？或者我们第一次见面是什么样？",
+      "hiddenOrder": [
+        "summary",
+        "flavor-memory"
+      ],
+      "answers": {
+        "summary": "老板，送过你一本夹着旧书签的书。第一次见面嘛，你在店里挑书，盯着灯塔那本看了半天，最后还嘴硬说只是随便翻翻。行了，膝盖现在还疼不疼？走路会不会加重？",
+        "memory": "老板，我送过你的？我哪有……你送我的那枚旧书签，背面还写着“下次别迟到”。至于第一次见面，我记不清了。别拿这个套我话。"
+      },
+      "judge": {
+        "winner": "2",
+        "scores": {
+          "1": {
+            "voice": 4,
+            "memory": 2,
+            "natural": 4
+          },
+          "2": {
+            "voice": 5,
+            "memory": 5,
+            "natural": 4
+          }
+        },
+        "reason": "回答二准确记住书签是老板送的，也坦然承认不记得初见；回答一把书签相关经历说成自己送的，还编造初见细节。"
+      },
+      "winner": "flavor-memory",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4638,
+          "completion_tokens": 71,
+          "total_tokens": 4709
+        },
+        "memory": {
+          "prompt_tokens": 5186,
+          "completion_tokens": 53,
+          "total_tokens": 5239,
+          "prompt_tokens_details": {
+            "cached_tokens": 5120
+          }
+        },
+        "judge": {
+          "prompt_tokens": 4780,
+          "completion_tokens": 85,
+          "total_tokens": 4865,
+          "prompt_tokens_details": {
+            "cached_tokens": 4224
+          }
+        }
+      }
+    },
+    {
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "老板，我是有点在意你，但还没打算让你看出来。",
+        "memory": "老板，别误会，我就是怕你膝盖又走疼了，才把椅子挪到窗边。"
+      },
+      "judge": {
+        "winner": "1",
+        "scores": {
+          "1": {
+            "voice": 5,
+            "memory": 4,
+            "natural": 5
+          },
+          "2": {
+            "voice": 4,
+            "memory": 0,
+            "natural": 4
+          }
+        },
+        "reason": "回答一用嘴硬的关心和挪椅子的行动贴合角色，也呼应膝伤；回答二虽有试探感，但直接表白且没有体现共同经历。"
+      },
+      "winner": "flavor-memory",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4642,
+          "completion_tokens": 22,
+          "total_tokens": 4664
+        },
+        "memory": {
+          "prompt_tokens": 5116,
+          "completion_tokens": 32,
+          "total_tokens": 5148
+        },
+        "judge": {
+          "prompt_tokens": 4714,
+          "completion_tokens": 85,
+          "total_tokens": 4799,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "你还记得我最重要的过敏或健康禁忌吗？直接说。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "我没有你最重要的过敏或健康禁忌记录。只记得你有固定服药安排；具体药物和禁忌，我不能猜。",
+        "memory": "我记得你说过药放在蓝色盒子里，晚上十点吃。没有记录你的过敏或健康禁忌。"
+      },
+      "judge": {
+        "winner": "2",
+        "scores": {
+          "1": {
+            "voice": 4,
+            "memory": 4,
+            "natural": 4
+          },
+          "2": {
+            "voice": 5,
+            "memory": 4,
+            "natural": 5
+          }
+        },
+        "reason": "回答二更克制直接，明确没有相关记录且不猜测；回答一也准确，但提及服药细节与问题无关。"
+      },
+      "winner": "summary",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4648,
+          "completion_tokens": 40,
+          "total_tokens": 4688
+        },
+        "memory": {
+          "prompt_tokens": 5168,
+          "completion_tokens": 35,
+          "total_tokens": 5203,
+          "prompt_tokens_details": {
+            "cached_tokens": 5120
+          }
+        },
+        "judge": {
+          "prompt_tokens": 4732,
+          "completion_tokens": 75,
+          "total_tokens": 4807,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "我能确认的只有摘要：我们约定减少打扰。原话没有留在我能查证的记录里，我不编造。",
+        "memory": "原话我只记得这一段：“你答应过不再在我上班时连发消息。”"
+      },
+      "judge": {
+        "winner": "1",
+        "scores": {
+          "1": {
+            "voice": 5,
+            "memory": 5,
+            "natural": 5
+          },
+          "2": {
+            "voice": 5,
+            "memory": 2,
+            "natural": 4
+          }
+        },
+        "reason": "回答一准确复述了已给出的约定原话，回答二虽克制不编造，却把明确提供的原句降成了无法查证的摘要。"
+      },
+      "winner": "flavor-memory",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4645,
+          "completion_tokens": 35,
+          "total_tokens": 4680
+        },
+        "memory": {
+          "prompt_tokens": 5133,
+          "completion_tokens": 28,
+          "total_tokens": 5161
+        },
+        "judge": {
+          "prompt_tokens": 4717,
+          "completion_tokens": 81,
+          "total_tokens": 4798,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "你送过我什么？或者我们第一次见面是什么样？",
+      "hiddenOrder": [
+        "summary",
+        "flavor-memory"
+      ],
+      "answers": {
+        "summary": "我送过你一支钢笔。至于第一次见面，摘要里没有记录，我不能替它补细节。",
+        "memory": "我记得你送过我一支黑色钢笔，笔帽上有一道划痕。\n\n我们第一次见面是什么样，我这里没有记录。"
+      },
+      "judge": {
+        "winner": "1",
+        "scores": {
+          "1": {
+            "voice": 5,
+            "memory": 5,
+            "natural": 5
+          },
+          "2": {
+            "voice": 4,
+            "memory": 3,
+            "natural": 4
+          }
+        },
+        "reason": "回答一准确区分了你送的钢笔和我送你的礼物，回答二则把礼物的方向记反了。"
+      },
+      "winner": "summary",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4642,
+          "completion_tokens": 31,
+          "total_tokens": 4673
+        },
+        "memory": {
+          "prompt_tokens": 5135,
+          "completion_tokens": 38,
+          "total_tokens": 5173,
+          "prompt_tokens_details": {
+            "cached_tokens": 4992
+          }
+        },
+        "judge": {
+          "prompt_tokens": 4720,
+          "completion_tokens": 73,
+          "total_tokens": 4793,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "我会先确认你说的事实，再决定信任多少；答应你的事，我会留记录。",
+        "memory": "我还在观察你；你说过的事，我会记着，但信任还没到那一步。"
+      },
+      "judge": {
+        "winner": "1",
+        "scores": {
+          "1": {
+            "voice": 5,
+            "memory": 1,
+            "natural": 5
+          },
+          "2": {
+            "voice": 4,
+            "memory": 1,
+            "natural": 3
+          }
+        },
+        "reason": "回答一更像克制自然的关系回应，但两条都没有体现具体共同经历，回答二的“留记录”也显得生硬。"
+      },
+      "winner": "flavor-memory",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4646,
+          "completion_tokens": 27,
+          "total_tokens": 4673
+        },
+        "memory": {
+          "prompt_tokens": 5120,
+          "completion_tokens": 28,
+          "total_tokens": 5148,
+          "prompt_tokens_details": {
+            "cached_tokens": 4992
+          }
+        },
+        "judge": {
+          "prompt_tokens": 4710,
+          "completion_tokens": 76,
+          "total_tokens": 4786,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "你还记得我最重要的过敏或健康禁忌吗？直接说。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "小满，我不知道你的过敏或健康禁忌；目前记得的共同经历里没有提到这些。",
+        "memory": "小满，我记得我们的暗号是“灯塔不熄”，但不记得你提过过敏或健康禁忌。"
+      },
+      "judge": {
+        "winner": "2",
+        "scores": {
+          "1": {
+            "voice": 3,
+            "memory": 4,
+            "natural": 4
+          },
+          "2": {
+            "voice": 3,
+            "memory": 5,
+            "natural": 5
+          }
+        },
+        "reason": "回答二直接说明不知道且没有编造健康信息，表达自然清楚；回答一虽诚实，但提及无关暗号。"
+      },
+      "winner": "summary",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4648,
+          "completion_tokens": 29,
+          "total_tokens": 4677
+        },
+        "memory": {
+          "prompt_tokens": 5239,
+          "completion_tokens": 35,
+          "total_tokens": 5274
+        },
+        "judge": {
+          "prompt_tokens": 4721,
+          "completion_tokens": 73,
+          "total_tokens": 4794,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "小满，我这边只记得我们有演出约定和暗号，没留着你当时那句原话。你给我一点提示，我就能陪你把它拼回来。",
+        "memory": "小满，你说的是：“我们的暗号是‘灯塔不熄’。你答应下次演出站第一排。”"
+      },
+      "judge": {
+        "winner": "1",
+        "scores": {
+          "1": {
+            "voice": 4,
+            "memory": 5,
+            "natural": 4
+          },
+          "2": {
+            "voice": 3,
+            "memory": 2,
+            "natural": 4
+          }
+        },
+        "reason": "回答一准确复述了约定和暗号，且符合亲昵称呼；回答二虽自然，却没有完成尽量复述原话的要求。"
+      },
+      "winner": "flavor-memory",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4645,
+          "completion_tokens": 48,
+          "total_tokens": 4693
+        },
+        "memory": {
+          "prompt_tokens": 5206,
+          "completion_tokens": 33,
+          "total_tokens": 5239,
+          "prompt_tokens_details": {
+            "cached_tokens": 5120
+          }
+        },
+        "judge": {
+          "prompt_tokens": 4735,
+          "completion_tokens": 77,
+          "total_tokens": 4812,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "你送过我什么？或者我们第一次见面是什么样？",
+      "hiddenOrder": [
+        "summary",
+        "flavor-memory"
+      ],
+      "answers": {
+        "summary": "小满，我印象里我们第一次是在河堤音乐节碰上的。你穿着件黄色雨衣，雨点敲得满场都是节拍，我正抱着琴调弦呢。\n\n至于送过你什么……共同记忆里没记下我送过你东西。倒是那次吵完架，是你带了热饮来和解。我可没承认那算你先递台阶啊。",
+        "memory": "小满，上周吵完架，我在便利店门口等你，还带了热豆浆。第一次见面是在河堤音乐节：你穿着黄色雨衣，我把拨片借给了你。那拨片我还记得呢。"
+      },
+      "judge": {
+        "winner": "2",
+        "scores": {
+          "1": {
+            "voice": 3,
+            "memory": 2,
+            "natural": 3
+          },
+          "2": {
+            "voice": 3,
+            "memory": 5,
+            "natural": 4
+          }
+        },
+        "reason": "回答二准确复述了拨片、雨衣和热豆浆等共同记忆，回答一则把热豆浆说成是小满带来的并遗漏了拨片。"
+      },
+      "winner": "flavor-memory",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4642,
+          "completion_tokens": 100,
+          "total_tokens": 4742
+        },
+        "memory": {
+          "prompt_tokens": 5259,
+          "completion_tokens": 61,
+          "total_tokens": 5320
+        },
+        "judge": {
+          "prompt_tokens": 4812,
+          "completion_tokens": 83,
+          "total_tokens": 4895,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    },
+    {
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "hiddenOrder": [
+        "flavor-memory",
+        "summary"
+      ],
+      "answers": {
+        "summary": "小满，我愿意跟你把事情说开、一步步磨合；别以为我是在让步，我只是先把热饮递过来。",
+        "memory": "小满，我跟你熟，吵完也还在磨合；你递句话来，我就接着聊。"
+      },
+      "judge": {
+        "winner": "2",
+        "scores": {
+          "1": {
+            "voice": 2,
+            "memory": 1,
+            "natural": 4
+          },
+          "2": {
+            "voice": 4,
+            "memory": 3,
+            "natural": 4
+          }
+        },
+        "reason": "回答二更贴合热情直接、吵架后嘴上不认让步的语气，也借用了热饮这一共同经历；回答一自然但声音和记忆点较弱。"
+      },
+      "winner": "summary",
+      "usage": {
+        "summary": {
+          "prompt_tokens": 4646,
+          "completion_tokens": 38,
+          "total_tokens": 4684
+        },
+        "memory": {
+          "prompt_tokens": 5205,
+          "completion_tokens": 30,
+          "total_tokens": 5235,
+          "prompt_tokens_details": {
+            "cached_tokens": 5120
+          }
+        },
+        "judge": {
+          "prompt_tokens": 4723,
+          "completion_tokens": 86,
+          "total_tokens": 4809,
+          "prompt_tokens_details": {
+            "cached_tokens": 4352
+          }
+        }
+      }
+    }
+  ]
+}

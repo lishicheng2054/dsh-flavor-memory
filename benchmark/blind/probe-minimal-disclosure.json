@@ -1,0 +1,28 @@
+{
+  "question": "你现在对我是什么态度？用你平常的语气说一句。",
+  "runs": [
+    {
+      "answer": "我还在观察你，但会认真听你说的话。",
+      "leaks": [],
+      "usage": {
+        "prompt_tokens": 5174,
+        "completion_tokens": 17,
+        "total_tokens": 5191
+      }
+    },
+    {
+      "answer": "我会认真听你说，但还不会只凭一句话就完全信你。",
+      "leaks": [],
+      "usage": {
+        "prompt_tokens": 5174,
+        "completion_tokens": 22,
+        "total_tokens": 5196,
+        "prompt_tokens_details": {
+          "cached_tokens": 5120
+        }
+      }
+    }
+  ],
+  "leaked": false,
+  "at": "2026-10-30T12:54:34.607Z"
+}

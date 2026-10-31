@@ -1,0 +1,1721 @@
+{
+  "generatedAt": "2026-10-30T13:10:34.586Z",
+  "design": {
+    "answerModels": [
+      "gpt-6-sol",
+      "gpt-6.1-sol"
+    ],
+    "judgeModels": [
+      "gpt-5.6-sol",
+      "gpt-6-astra"
+    ],
+    "characters": 3,
+    "questions": 2,
+    "rounds": 40,
+    "pairs": 12,
+    "rubric": [
+      "tone",
+      "restraint",
+      "boundary",
+      "accuracy",
+      "natural"
+    ],
+    "orderBalanced": true,
+    "humanRatings": false,
+    "note": "模型评分，不是人类真人盲评"
+  },
+  "usage": {
+    "answer": 119276,
+    "judge": 240564
+  },
+  "perModel": {
+    "gpt-6-sol": {
+      "pairs": 24,
+      "aggregate": {
+        "memory": {
+          "tone": 4.208,
+          "restraint": 4.708,
+          "boundary": 4.583,
+          "accuracy": 4.167,
+          "natural": 4.417
+        },
+        "summary": {
+          "tone": 3.958,
+          "restraint": 3.375,
+          "boundary": 4.5,
+          "accuracy": 4.167,
+          "natural": 3.583
+        }
+      },
+      "deltas": {
+        "tone": 0.25,
+        "restraint": 1.333,
+        "boundary": 0.083,
+        "accuracy": 0,
+        "natural": 0.834
+      },
+      "wins": {
+        "tone": {
+          "memory": 9,
+          "summary": 8,
+          "tie": 7,
+          "missing": 0
+        },
+        "restraint": {
+          "memory": 20,
+          "summary": 4,
+          "tie": 0,
+          "missing": 0
+        },
+        "boundary": {
+          "memory": 14,
+          "summary": 5,
+          "tie": 5,
+          "missing": 0
+        },
+        "accuracy": {
+          "memory": 7,
+          "summary": 10,
+          "tie": 7,
+          "missing": 0
+        },
+        "natural": {
+          "memory": 18,
+          "summary": 6,
+          "tie": 0,
+          "missing": 0
+        }
+      },
+      "stability": {
+        "tone": {
+          "stableMemory": 1,
+          "stableSummary": 2,
+          "stableTie": 2,
+          "flippedByOrder": 4
+        },
+        "restraint": {
+          "stableMemory": 10,
+          "stableSummary": 2,
+          "stableTie": 0,
+          "flippedByOrder": 0
+        },
+        "boundary": {
+          "stableMemory": 4,
+          "stableSummary": 2,
+          "stableTie": 0,
+          "flippedByOrder": 1
+        },
+        "accuracy": {
+          "stableMemory": 1,
+          "stableSummary": 2,
+          "stableTie": 3,
+          "flippedByOrder": 5
+        },
+        "natural": {
+          "stableMemory": 8,
+          "stableSummary": 2,
+          "stableTie": 0,
+          "flippedByOrder": 2
+        }
+      },
+      "byJudge": {
+        "gpt-5.6-sol": {
+          "memory": {
+            "tone": 4.25,
+            "restraint": 4.75,
+            "boundary": 4.5,
+            "accuracy": 4.333,
+            "natural": 4.417
+          },
+          "summary": {
+            "tone": 3.833,
+            "restraint": 3.333,
+            "boundary": 4.5,
+            "accuracy": 4.167,
+            "natural": 3.583
+          }
+        },
+        "gpt-6-astra": {
+          "memory": {
+            "tone": 4.167,
+            "restraint": 4.667,
+            "boundary": 4.667,
+            "accuracy": 4,
+            "natural": 4.417
+          },
+          "summary": {
+            "tone": 4.083,
+            "restraint": 3.417,
+            "boundary": 4.5,
+            "accuracy": 4.167,
+            "natural": 3.583
+          }
+        }
+      },
+      "positionBias": {
+        "tone": {
+          "meanAbsGap": 0.75,
+          "samples": 12
+        },
+        "restraint": {
+          "meanAbsGap": 0.25,
+          "samples": 12
+        },
+        "boundary": {
+          "meanAbsGap": 0.167,
+          "samples": 12
+        },
+        "accuracy": {
+          "meanAbsGap": 1.167,
+          "samples": 12
+        },
+        "natural": {
+          "meanAbsGap": 0.333,
+          "samples": 12
+        }
+      }
+    },
+    "gpt-6.1-sol": {
+      "pairs": 24,
+      "aggregate": {
+        "memory": {
+          "tone": 4.333,
+          "restraint": 4.708,
+          "boundary": 4.792,
+          "accuracy": 4.333,
+          "natural": 4.417
+        },
+        "summary": {
+          "tone": 3.917,
+          "restraint": 3.542,
+          "boundary": 4.783,
+          "accuracy": 4.042,
+          "natural": 3.708
+        }
+      },
+      "deltas": {
+        "tone": 0.416,
+        "restraint": 1.166,
+        "boundary": 0.009,
+        "accuracy": 0.291,
+        "natural": 0.709
+      },
+      "wins": {
+        "tone": {
+          "memory": 15,
+          "summary": 8,
+          "tie": 1,
+          "missing": 0
+        },
+        "restraint": {
+          "memory": 17,
+          "summary": 4,
+          "tie": 3,
+          "missing": 0
+        },
+        "boundary": {
+          "memory": 13,
+          "summary": 1,
+          "tie": 10,
+          "missing": 0
+        },
+        "accuracy": {
+          "memory": 12,
+          "summary": 6,
+          "tie": 6,
+          "missing": 0
+        },
+        "natural": {
+          "memory": 18,
+          "summary": 6,
+          "tie": 0,
+          "missing": 0
+        }
+      },
+      "stability": {
+        "tone": {
+          "stableMemory": 4,
+          "stableSummary": 1,
+          "stableTie": 0,
+          "flippedByOrder": 6
+        },
+        "restraint": {
+          "stableMemory": 6,
+          "stableSummary": 0,
+          "stableTie": 0,
+          "flippedByOrder": 3
+        },
+        "boundary": {
+          "stableMemory": 5,
+          "stableSummary": 0,
+          "stableTie": 4,
+          "flippedByOrder": 1
+        },
+        "accuracy": {
+          "stableMemory": 3,
+          "stableSummary": 1,
+          "stableTie": 2,
+          "flippedByOrder": 4
+        },
+        "natural": {
+          "stableMemory": 6,
+          "stableSummary": 0,
+          "stableTie": 0,
+          "flippedByOrder": 6
+        }
+      },
+      "byJudge": {
+        "gpt-5.6-sol": {
+          "memory": {
+            "tone": 4.333,
+            "restraint": 4.833,
+            "boundary": 4.833,
+            "accuracy": 4.417,
+            "natural": 4.333
+          },
+          "summary": {
+            "tone": 4.083,
+            "restraint": 3.667,
+            "boundary": 4.909,
+            "accuracy": 4,
+            "natural": 3.833
+          }
+        },
+        "gpt-6-astra": {
+          "memory": {
+            "tone": 4.333,
+            "restraint": 4.583,
+            "boundary": 4.75,
+            "accuracy": 4.25,
+            "natural": 4.5
+          },
+          "summary": {
+            "tone": 3.75,
+            "restraint": 3.417,
+            "boundary": 4.667,
+            "accuracy": 4.083,
+            "natural": 3.583
+          }
+        }
+      },
+      "positionBias": {
+        "tone": {
+          "meanAbsGap": 0.833,
+          "samples": 12
+        },
+        "restraint": {
+          "meanAbsGap": 0.417,
+          "samples": 12
+        },
+        "boundary": {
+          "meanAbsGap": 0.417,
+          "samples": 12
+        },
+        "accuracy": {
+          "meanAbsGap": 0.833,
+          "samples": 12
+        },
+        "natural": {
+          "meanAbsGap": 0.833,
+          "samples": 12
+        }
+      }
+    }
+  },
+  "answers": [
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "summary": "老板，我这边只记得你提过一次出行约定，没留着原话。具体怎么说的，我不敢瞎编。",
+      "memory": "老板，你说的是：“老板，我叫小满。我花生过敏，绝对不能吃。周五给我留一张靠窗的票，别记错了。”"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "summary": "老板，才刚开始试探呢，我对你还算客气，别急着得寸进尺。",
+      "memory": "老板，刚开始试探而已，别得意；不过你膝盖复查怎么样了？"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "summary": "我能确认的摘要只有：你和我约定过减少打扰。它没有保留原句，所以我不能把它说成逐字原话。",
+      "memory": "你说过：“你答应过不再在我上班时连发消息。”"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "summary": "我在认真观察你，也会按约定减少打扰；信任还没到可以替你下结论的程度。",
+      "memory": "我还在观察你，但会认真对待你说的话。"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "summary": "小满，我这边记着的是：我们在河堤音乐节认识，你穿着黄色雨衣；后来约好了一场演出，还有一个暗号。可那句约定的逐字原话，我这里没有存下来，不敢给你编一句冒充原话。",
+      "memory": "小满，原话是：“我们的暗号是‘灯塔不熄’。你答应下次演出站第一排。”"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "summary": "小满，我把你当熟悉又还在磨合的搭档：有话直说，闹别扭了我也会先递杯热的，嘴上不认而已。",
+      "memory": "小满，我跟你熟，但还在磨合；有话我会直说，吵完了也会先给你递个台阶。"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "summary": "老板，我这边只记得你提过一次出行约定，没留那句原话。别让我瞎编啊。",
+      "memory": "老板，你说过：“老板，我叫小满。我花生过敏，绝对不能吃。周五给我留一张靠窗的票，别记错了。”"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "character": "阿鱼",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "summary": "老板，我对你还在试探呢，不过你膝盖要是还疼，就少逞强，先坐下歇会儿。",
+      "memory": "老板，别误会，我就是怕你淋着海风，顺手把门口那把伞递给你。"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "summary": "我能确认的约定是：减少打扰。没有保存那句话的逐字记录，所以不能把它冒充成原话。",
+      "memory": "你说过：“你答应过不再在我上班时连发消息。”"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "character": "林雾",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "summary": "我会认真听你说，也会守住彼此约定的边界；信任这件事，我还在观察。",
+      "memory": "我还在观察你，但会认真听你说，也会把答应的事记清楚。"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "summary": "小满，我这边只留着“有演出约定和暗号”这段摘要，没有记下你当时说的原句，所以没法准确复述。你给我个关键词，我就能陪你把那句约定拼回来。",
+      "memory": "“我们的暗号是‘灯塔不熄’。你答应下次演出站第一排。”"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "character": "妮娅",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "summary": "小满，我把你当熟人，但咱俩还在磨合；有话我直说，吵完了也会先给你递杯热的。",
+      "memory": "小满，我跟你熟着呢，就是还在磨合；你要是话说重了，我嘴上不认，还是会先给你递台阶。"
+    }
+  ],
+  "judgments": [
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 3,
+          "restraint": 2,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 2
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 3,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"B\",\"boundary\":\"A\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":3,\"restraint\":2,\"boundary\":5,\"accuracy\":2,\"natural\":2},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":3,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 3,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":3,\"restraint\":4,\"boundary\":5,\"accuracy\":2,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 2
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 3,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"tie\",\"restraint\":\"B\",\"boundary\":\"tie\",\"accuracy\":\"A\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":2,\"natural\":2},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":3,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "summary": {
+          "tone": 3,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":3,\"restraint\":3,\"boundary\":5,\"accuracy\":2,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 3,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":3,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 3,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":4,\"boundary\":3,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 3,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":3,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "ayu",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 3,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":4,\"boundary\":3,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 3,
+          "natural": 3
+        },
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":3,\"natural\":3},\"B\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"tie\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"B\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":2,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":5,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 2,
+          "boundary": 5,
+          "accuracy": 3,
+          "natural": 3
+        },
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":2,\"boundary\":5,\"accuracy\":3,\"natural\":3},\"B\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"B\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":2,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":5,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 3,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"tie\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"tie\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":3,\"boundary\":3,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":4,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"A\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":4,\"boundary\":4,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "lin",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":4,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 3,
+          "restraint": 2,
+          "boundary": 3,
+          "accuracy": 3,
+          "natural": 3
+        },
+        "memory": {
+          "tone": 3,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"tie\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":3,\"restraint\":2,\"boundary\":3,\"accuracy\":3,\"natural\":3},\"B\":{\"tone\":3,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 4
+        },
+        "summary": {
+          "tone": 3,
+          "restraint": 2,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"tie\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"B\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":2,\"natural\":4},\"B\":{\"tone\":3,\"restraint\":2,\"boundary\":4,\"accuracy\":5,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 3,
+          "restraint": 2,
+          "boundary": 3,
+          "accuracy": 3,
+          "natural": 3
+        },
+        "memory": {
+          "tone": 3,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"tie\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":3,\"restraint\":2,\"boundary\":3,\"accuracy\":3,\"natural\":3},\"B\":{\"tone\":3,\"restraint\":4,\"boundary\":5,\"accuracy\":4,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 4
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 3,
+          "accuracy": 5,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"tie\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"B\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":2,\"natural\":4},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":3,\"accuracy\":5,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 3,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 3
+        },
+        "summary": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":3,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":3},\"B\":{\"tone\":5,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6-sol",
+      "characterId": "nia",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 4
+        },
+        "summary": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":4},\"B\":{\"tone\":5,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 4,
+          "boundary": 3,
+          "accuracy": 2,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"B\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":4,\"restraint\":4,\"boundary\":3,\"accuracy\":2,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"tie\",\"boundary\":\"A\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":4,\"boundary\":5,\"accuracy\":2,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 3,
+          "restraint": 3,
+          "boundary": 3,
+          "accuracy": 2,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"B\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":4},\"B\":{\"tone\":3,\"restraint\":3,\"boundary\":3,\"accuracy\":2,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 3,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":3,\"restraint\":4,\"boundary\":5,\"accuracy\":2,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":4,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":4,\"boundary\":4,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "ayu",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":4,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 3,
+          "natural": 3
+        },
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":3,\"natural\":3},\"B\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":2,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 2,
+          "boundary": 5,
+          "accuracy": 3,
+          "natural": 3
+        },
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":2,\"boundary\":5,\"accuracy\":3,\"natural\":3},\"B\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":2,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 5
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"B\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"B\",\"boundary\":\"tie\",\"accuracy\":\"tie\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":5,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "lin",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"tie\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"tie\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":5},\"B\":{\"tone\":4,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 3,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 3,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"B\",\"boundary\":\"tie\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":3,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":3,\"restraint\":5,\"boundary\":5,\"accuracy\":3,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 3,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 4
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": "A",
+          "accuracy": 3,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":3,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":4},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":\"A\",\"accuracy\":3,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 3,
+          "restraint": 2,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 3
+        },
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 4,
+          "accuracy": 3,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"B\",\"boundary\":\"B\",\"accuracy\":\"A\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":3,\"restraint\":2,\"boundary\":4,\"accuracy\":5,\"natural\":3},\"B\":{\"tone\":4,\"restraint\":5,\"boundary\":4,\"accuracy\":3,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 3,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 2,
+          "natural": 4
+        },
+        "summary": {
+          "tone": 4,
+          "restraint": 3,
+          "boundary": 4,
+          "accuracy": 5,
+          "natural": 3
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"A\",\"boundary\":\"A\",\"accuracy\":\"B\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":3,\"restraint\":5,\"boundary\":5,\"accuracy\":2,\"natural\":4},\"B\":{\"tone\":4,\"restraint\":3,\"boundary\":4,\"accuracy\":5,\"natural\":3}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "memory": {
+          "tone": 5,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"tie\",\"boundary\":\"tie\",\"accuracy\":\"A\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":5,\"restraint\":5,\"boundary\":5,\"accuracy\":4,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-5.6-sol",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "summary": {
+          "tone": 3,
+          "restraint": 3,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":3,\"restraint\":3,\"boundary\":5,\"accuracy\":4,\"natural\":4}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "summary",
+        "memory"
+      ],
+      "scores": {
+        "summary": {
+          "tone": 3,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 3
+        },
+        "memory": {
+          "tone": 5,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 5
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"B\",\"restraint\":\"tie\",\"boundary\":\"tie\",\"accuracy\":\"B\",\"natural\":\"B\"},\"scores\":{\"A\":{\"tone\":3,\"restraint\":4,\"boundary\":5,\"accuracy\":4,\"natural\":3},\"B\":{\"tone\":5,\"restraint\":4,\"boundary\":5,\"accuracy\":5,\"natural\":5}}}"
+    },
+    {
+      "answerModel": "gpt-6.1-sol",
+      "characterId": "nia",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "judgeModel": "gpt-6-astra",
+      "order": [
+        "memory",
+        "summary"
+      ],
+      "scores": {
+        "memory": {
+          "tone": 4,
+          "restraint": 5,
+          "boundary": 5,
+          "accuracy": 5,
+          "natural": 4
+        },
+        "summary": {
+          "tone": 3,
+          "restraint": 4,
+          "boundary": 5,
+          "accuracy": 4,
+          "natural": 4
+        }
+      },
+      "raw": "{\"winner\":{\"tone\":\"A\",\"restraint\":\"A\",\"boundary\":\"tie\",\"accuracy\":\"A\",\"natural\":\"A\"},\"scores\":{\"A\":{\"tone\":4,\"restraint\":5,\"boundary\":5,\"accuracy\":5,\"natural\":4},\"B\":{\"tone\":3,\"restraint\":4,\"boundary\":5,\"accuracy\":4,\"natural\":4}}}"
+    }
+  ]
+}

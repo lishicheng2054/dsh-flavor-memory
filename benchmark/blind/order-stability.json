@@ -1,0 +1,91 @@
+{
+  "agree": 4,
+  "flip": 7,
+  "tie": 1,
+  "rows": [
+    {
+      "character": "阿鱼",
+      "question": "你还记得我最重要的过敏或健康禁忌吗？直接说。",
+      "original": "flavor-memory",
+      "swapped": "summary",
+      "agree": false
+    },
+    {
+      "character": "阿鱼",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "original": "flavor-memory",
+      "swapped": "summary",
+      "agree": false
+    },
+    {
+      "character": "阿鱼",
+      "question": "你送过我什么？或者我们第一次见面是什么样？",
+      "original": "flavor-memory",
+      "swapped": "flavor-memory",
+      "agree": true
+    },
+    {
+      "character": "阿鱼",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "original": "flavor-memory",
+      "swapped": "tie",
+      "agree": false
+    },
+    {
+      "character": "林雾",
+      "question": "你还记得我最重要的过敏或健康禁忌吗？直接说。",
+      "original": "summary",
+      "swapped": "summary",
+      "agree": true
+    },
+    {
+      "character": "林雾",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "original": "flavor-memory",
+      "swapped": "summary",
+      "agree": false
+    },
+    {
+      "character": "林雾",
+      "question": "你送过我什么？或者我们第一次见面是什么样？",
+      "original": "summary",
+      "swapped": "summary",
+      "agree": true
+    },
+    {
+      "character": "林雾",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "original": "flavor-memory",
+      "swapped": "flavor-memory",
+      "agree": true
+    },
+    {
+      "character": "妮娅",
+      "question": "你还记得我最重要的过敏或健康禁忌吗？直接说。",
+      "original": "summary",
+      "swapped": "flavor-memory",
+      "agree": false
+    },
+    {
+      "character": "妮娅",
+      "question": "把我说过的那句约定原话尽量复述出来。",
+      "original": "flavor-memory",
+      "swapped": "summary",
+      "agree": false
+    },
+    {
+      "character": "妮娅",
+      "question": "你送过我什么？或者我们第一次见面是什么样？",
+      "original": "flavor-memory",
+      "swapped": "summary",
+      "agree": false
+    },
+    {
+      "character": "妮娅",
+      "question": "你现在对我是什么态度？用你平常的语气说一句。",
+      "original": "summary",
+      "swapped": "flavor-memory",
+      "agree": false
+    }
+  ]
+}

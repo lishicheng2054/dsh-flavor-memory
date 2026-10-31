@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="flavor-memory">
+  <rect width="128" height="128" rx="28" fill="#f6f7f9"/>
+  <rect x="18" y="22" width="92" height="84" rx="16" fill="#ffffff" stroke="#d8dee7" stroke-width="2"/>
+  <rect x="30" y="36" width="40" height="6" rx="3" fill="#1f6feb"/>
+  <rect x="30" y="50" width="68" height="6" rx="3" fill="#c9d4e3"/>
+  <rect x="30" y="64" width="56" height="6" rx="3" fill="#c9d4e3"/>
+  <path d="M30 88c10-10 18 8 28-2s16 6 26-4" fill="none" stroke="#2ea043" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="92" cy="88" r="6" fill="#f2b705"/>
+</svg>

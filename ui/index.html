@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#f5f7f6">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flavor Memory Studio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%23e6f4f0%22/%3E%3Cpath d=%22M18 45V19h8l6 12 6-12h8v26h-7V30l-5 10h-4l-5-10v15z%22 fill=%22%230f7a68%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/flavor-memory/studio.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="rail">
+      <header class="brand">
+        <div class="mark">FM</div>
+        <div><strong>Flavor Memory</strong><span>角色记忆控制台</span></div>
+      </header>
+      <div class="rail-search">
+        <input id="characterFilter" type="search" placeholder="搜索角色…" autocomplete="off" aria-label="搜索角色">
+        <span id="characterCount" class="count" aria-hidden="true">0</span>
+      </div>
+      <nav id="characterList" class="character-list" aria-label="角色列表"></nav>
+      <button id="newCharacter" class="new-character" type="button">＋ 新建角色</button>
+      <footer class="rail-footer"><span id="serverState">正在连接…</span><small>本地数据 · 不上传</small></footer>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">CHARACTER STUDIO</p>
+          <h1 id="characterTitle">初始化角色</h1>
+          <p id="characterSubtitle" class="subtitle">还没有选择角色</p>
+        </div>
+        <div class="actions">
+          <span id="dirtyPill" class="pill" hidden>未保存</span>
+          <button id="importButton" class="btn ghost" type="button">导入酒馆角色卡</button>
+          <button id="backupButton" class="btn ghost" type="button" title="导出全部角色与记忆档案">备份全部</button>
+          <button id="backupImportButton" class="btn ghost" type="button" title="从备份 JSON 恢复">恢复备份</button>
+          <button id="exportButton" class="btn ghost" type="button">导出角色卡</button>
+          <button id="saveButton" class="btn primary" type="button" title="Ctrl+S 保存">保存角色</button>
+        </div>
+      </header>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-orb">✦</div>
+        <h2>先创建一个有味道的角色</h2>
+        <p>可以手动初始化，也可以直接导入 SillyTavern V2 角色卡 JSON。世界书、示例和演化规则都能在这里调。</p>
+        <div class="actions center">
+          <button id="emptyCreate" class="btn primary" type="button">开始初始化</button>
+          <button id="emptyImport" class="btn ghost" type="button">导入角色卡</button>
+        </div>
+      </div>
+
+      <div id="editor" class="editor" hidden>
+        <nav class="tabs" id="tabs" role="tablist" aria-label="角色设定分区">
+          <button type="button" role="tab" aria-selected="true" data-tab="basics" class="tab active">基础设定</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="worldbook" class="tab">世界书 <b id="worldCount">0</b></button>
+          <button type="button" role="tab" aria-selected="false" data-tab="triggers" class="tab">触发规则 <b id="triggerCount">0</b></button>
+          <button type="button" role="tab" aria-selected="false" data-tab="examples" class="tab">示例对话 <b id="exampleCount">0</b></button>
+          <button type="button" role="tab" aria-selected="false" data-tab="memory" class="tab">运行状态</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="evolution" class="tab">演化与历史 <b id="pendingCount">0</b></button>
+          <button type="button" role="tab" aria-selected="false" data-tab="preview" class="tab">注入预览</button>
+        </nav>
+
+        <section class="panel active" data-panel="basics">
+          <div class="panel-heading"><div><p class="eyebrow">CORE IDENTITY</p><h2>基础设定</h2></div><span class="hint">兼容 SillyTavern 角色卡字段</span></div>
+          <div class="grid two">
+            <label class="field"><span>角色 ID <em>保存后不建议修改</em></span><input id="characterId" autocomplete="off" placeholder="ayu"></label>
+            <label class="field"><span>显示名称</span><input id="characterName" autocomplete="off" placeholder="阿鱼"></label>
+          </div>
+          <label class="field"><span>灵魂锚点 <em>身份、价值观、底线</em></span><textarea id="soul" rows="5" placeholder="阿鱼：嘴硬心软，先损后哄，不主动说教。她重视承诺，但不会把关心说出口。"></textarea><small>是否允许变化由右下方“演化规则”决定；默认建议模式，必须审批。</small></label>
+          <div class="grid two">
+            <label class="field"><span>角色描述</span><textarea id="description" rows="4" placeholder="外观、背景、当前处境"></textarea></label>
+            <label class="field"><span>性格</span><textarea id="personality" rows="4" placeholder="她如何做决定、如何表达情绪"></textarea></label>
+          </div>
+          <div class="grid two">
+            <label class="field"><span>初始关系 <em>角色卡起点</em></span><textarea id="relationship" rows="3" placeholder="刚开始互相试探"></textarea><small>这是起点；后续关系变化记录在场景卡中，二者都可修改。</small></label>
+            <label class="field"><span>场景</span><textarea id="scenario" rows="3" placeholder="雨夜，便利店的屋檐下"></textarea></label>
+          </div>
+          <label class="field"><span>开场白 <em>first_mes</em></span><textarea id="firstMessage" rows="3" placeholder="你来了。别站在雨里。"></textarea></label>
+          <label class="field"><span>系统提示 <em>system_prompt</em></span><textarea id="systemPrompt" rows="3" placeholder="角色必须遵守的角色扮演规则"></textarea></label>
+          <label class="field"><span>回复后置规则 <em>post_history_instructions</em></span><textarea id="postHistoryInstructions" rows="3" placeholder="每次回复前的额外约束"></textarea></label>
+          <label class="field"><span>备用开场白 <em>alternate_greetings，每行一条</em></span><textarea id="alternateGreetings" rows="3" placeholder="第二句开场白&#10;第三句开场白"></textarea></label>
+          <div class="grid three"><label class="field"><span>作者</span><input id="creator" autocomplete="off"></label><label class="field"><span>角色卡版本</span><input id="characterVersion" autocomplete="off" placeholder="1.0"></label><label class="field"><span>标签 <em>逗号分隔</em></span><input id="tags" autocomplete="off" placeholder="日常，嘴硬"></label></div>
+          <label class="field"><span>作者备注 <em>creator_notes</em></span><textarea id="creatorNotes" rows="3"></textarea></label>
+          <label class="field"><span>声音规则 <em>每行一条；可导入 voice 字段</em></span><textarea id="voice" rows="4" placeholder="叫她老板&#10;短句，停顿多&#10;被关心时先嘴硬"></textarea></label>
+          <div class="callout"><strong>导入兼容</strong><p>支持 chara_card_v2 的 data 解包、first_mes、mes_example、character_book.entries、keys、constant、probability、insertion_order。<code>replace</code> 位置暂按前插处理，避免误删主设定。</p></div>
+          <div class="danger-zone">
+            <div>
+              <b>角色管理</b>
+              <small>复制会带着全部设定开一个新角色；删除只移除本地角色资料，记忆库里已经跑出来的记录不受影响。</small>
+            </div>
+            <div class="actions">
+              <button id="duplicateCharacter" class="btn small ghost" type="button">复制为新角色</button>
+              <button id="deleteCharacter" class="btn small danger" type="button">删除角色</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" data-panel="worldbook">
+          <div class="panel-heading"><div><p class="eyebrow">RETRIEVAL FIRST</p><h2>世界书</h2></div><button id="addLore" class="btn small" type="button">＋ 添加条目</button></div>
+          <p class="note">只在命中关键词、正则或常驻规则时注入。每条都持久化命中次数、冷却和上限。</p>
+          <div id="loreList" class="stack"></div>
+        </section>
+
+        <section class="panel" data-panel="triggers">
+          <div class="panel-heading"><div><p class="eyebrow">KEYWORD ROUTING</p><h2>触发规则</h2></div><button id="addTrigger" class="btn small" type="button">＋ 添加触发</button></div>
+          <p class="note">触发可以关联多条世界书，并额外注入一段提示。只有命中当前用户消息时才生效。</p>
+          <div id="triggerList" class="stack"></div>
+        </section>
+
+        <section class="panel" data-panel="examples">
+          <div class="panel-heading"><div><p class="eyebrow">VOICE SAMPLES</p><h2>示例对话</h2></div><button id="addExample" class="btn small" type="button">＋ 添加示例</button></div>
+          <p class="note">预览时按当前问题挑相关的几条，不会把全部示例塞进上下文。</p>
+          <div id="exampleList" class="stack"></div>
+        </section>
+
+        <section class="panel" data-panel="evolution">
+          <div class="panel-heading"><div><p class="eyebrow">BOUNDED CHANGE</p><h2>演化与历史</h2></div><span class="hint">成长可以，漂移要有边界</span></div>
+          <div class="evolution-grid">
+            <label class="field"><span>灵魂模式</span><select id="soulMode"><option value="locked">锁定</option><option value="suggest">建议，需确认</option><option value="bounded">有限自动</option><option value="free">自由</option></select></label>
+            <label class="field"><span>声音模式</span><select id="voiceMode"><option value="locked">锁定</option><option value="suggest">建议，需确认</option><option value="bounded">有限自动</option><option value="free">自由</option></select></label>
+            <label class="field"><span>关系模式</span><select id="relationshipMode"><option value="locked">锁定</option><option value="suggest">建议，需确认</option><option value="bounded">有限自动</option><option value="free">自由</option></select></label>
+            <label class="field"><span>灵魂单次最大变化</span><div class="range-row"><input id="maxSoulDelta" type="range" min="0" max="0.5" step="0.01"><output id="maxSoulOutput">0.05</output></div></label>
+            <label class="field"><span>声音漂移上限</span><div class="range-row"><input id="maxVoiceDrift" type="range" min="0" max="0.5" step="0.01"><output id="maxVoiceOutput">0.20</output></div></label>
+            <label class="field"><span>历史保留条数</span><input id="historyLimit" type="number" min="1" max="500"></label>
+          </div>
+          <div class="switches">
+            <label class="switch"><input id="requireEvidence" type="checkbox"><span>变化必须有原话证据</span></label>
+            <label class="switch"><input id="requireApproval" type="checkbox"><span>变化必须人工确认</span></label>
+            <label class="switch"><input id="keepOriginal" type="checkbox"><span>保留版本，可一键恢复</span></label>
+          </div>
+          <div class="callout"><strong>四种模式</strong><p><b>锁定</b>：不可提案。<b>建议</b>：提案后必须确认。<b>有限自动</b>：保留差异和版本，按上限变化。<b>自由</b>：可写入，但仍保留证据与历史。模型不能绕过这里直接改灵魂。</p></div>
+          <div class="subheading"><h3>发起变化</h3><span class="hint">模型或你可以提案；仍受上面的模式、证据和审批规则约束</span></div>
+          <div class="grid two"><label class="field"><span>变化对象</span><select id="proposeTarget"><option value="soul">灵魂</option><option value="voice">声音</option><option value="relationship">关系</option></select></label><label class="field"><span>证据消息 ID <em>逗号或换行分隔</em></span><input id="proposeEvidence" autocomplete="off" placeholder="m1, m2"></label></div>
+          <label class="field"><span>变化后的内容</span><textarea id="proposeValue" rows="3" placeholder="声音可每行一条；灵魂和关系写完整的新版本"></textarea></label>
+          <label class="field"><span>变化原因</span><input id="proposeReason" autocomplete="off" placeholder="哪几次互动支持这个变化"></label>
+          <div class="preview-actions"><button id="proposeEvolution" class="btn primary" type="button">提交变化提案</button><span id="proposeStatus" class="hint"></span></div>
+          <div class="subheading"><h3>待审批</h3><span class="hint">接受或拒绝都会写入历史</span></div>
+          <div id="pendingList" class="stack compact"></div>
+          <div class="subheading"><h3>版本历史</h3><span class="hint">恢复不会删除后续记录</span></div>
+          <div id="revisionList" class="stack compact"></div>
+          <div class="subheading"><h3>已处理变化</h3></div>
+          <div id="historyList" class="stack compact"></div>
+        </section>
+
+        <section class="panel" data-panel="memory">
+          <div class="panel-heading"><div><p class="eyebrow">LIVE MEMORY</p><h2>运行状态</h2></div><span class="hint">当前关系 / 事实 / 场景卡</span></div>
+          <p class="note">这里读取的是记忆库实际运行状态，不是角色卡草稿。会话 scope 留空时读取全局档案；如果你使用 DSH 会话 ID，可以填入对应 scope 查看。</p>
+          <div class="grid two"><label class="field"><span>会话 scope <em>可留空</em></span><input id="memoryScope" autocomplete="off" placeholder="默认全局" list="memoryScopeList"></label><datalist id="memoryScopeList"></datalist><div class="preview-actions"><button id="refreshMemory" class="btn small" type="button">刷新运行状态</button><span id="memoryStatus" class="hint"></span></div></div>
+          <div id="scopeSummary" class="scope-summary"></div>
+          <div id="memoryMetrics" class="memory-metrics"></div>
+          <div class="preview-grid">
+            <article class="preview-card"><h3>初始关系（角色卡）</h3><pre id="initialRelationshipView">未设置</pre></article>
+            <article class="preview-card"><h3>当前关系（记忆层）</h3><pre id="currentRelationshipView">等待读取</pre></article>
+          </div>
+          <div class="subheading"><h3>人格回执</h3><span class="hint">实际注入会话前的最短锚点</span></div>
+          <article class="preview-card"><pre id="memoryAnchor">等待读取</pre></article>
+          <div class="subheading"><h3>原文检索</h3><span class="hint">只搜当前 scope；点击结果读取完整原话</span></div>
+          <div class="memory-search-row">
+            <input id="memoryQuery" autocomplete="off" placeholder="搜日期、地点、承诺、原话里的关键词…" aria-label="搜索记忆原文">
+            <button id="searchMemory" class="btn small primary" type="button">搜索原文</button>
+            <span id="memorySearchStatus" class="hint">把关键字写具体一些，命中更准</span>
+          </div>
+          <div id="memoryHits" class="stack compact memory-results"></div>
+          <article id="memoryReadCard" class="memory-read-card" hidden>
+            <div class="card-head"><b id="memoryReadTitle">原文</b><div class="card-head-actions"><button id="pinMemoryRead" class="icon-btn" type="button" data-pinned="false">保护这条</button><button id="closeMemoryRead" class="icon-btn" type="button">收起</button></div></div>
+            <p id="memoryReadMeta" class="hint"></p>
+            <pre id="memoryReadText"></pre>
+          </article>
+          <div class="subheading"><h3>当前事实</h3><span class="hint">更新时旧值保留在历史，不删除</span></div>
+          <div class="grid three"><label class="field"><span>事实键</span><input id="factKey" autocomplete="off" placeholder="住址"></label><label class="field"><span>事实值</span><input id="factValue" autocomplete="off" placeholder="城东"></label><label class="field"><span>标签 <em>逗号分隔</em></span><input id="factTags" autocomplete="off" placeholder="重要，当前"></label></div>
+          <div class="preview-actions"><button id="saveFact" class="btn small primary" type="button">写入当前事实</button><span id="factStatus" class="hint">同名事实会自动进入历史</span></div>
+          <div id="activeFacts" class="stack compact"></div>
+          <div class="subheading"><h3>最近场景卡</h3><span class="hint">关系、事件和原话引用</span></div>
+          <div id="memoryCards" class="stack compact"></div>
+        </section>
+
+        <section class="panel" data-panel="preview">
+          <div class="panel-heading"><div><p class="eyebrow">DRY RUN</p><h2>注入预览</h2></div><span id="previewSize" class="hint">等待测试</span></div>
+          <label class="field"><span>模拟用户消息</span><textarea id="previewQuery" rows="3" placeholder="外面下雨了，你还记得我们约好去海边吗？"></textarea></label>
+          <div class="preview-actions"><button id="previewButton" class="btn primary" type="button">生成预览</button><span id="previewStatus" class="hint"></span></div>
+          <div class="preview-grid">
+            <article class="preview-card"><h3>最终注入</h3><pre id="previewPrompt">还没有生成预览。</pre></article>
+            <article class="preview-card"><h3>命中的世界书</h3><div id="previewHits" class="stack compact"></div></article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div id="toast" class="toast" role="status"></div>
+  </div>
+  <input id="fileInput" type="file" accept="application/json,.json" hidden>
+  <input id="backupInput" type="file" accept="application/json,.json" hidden>
+  <script type="module" src="/flavor-memory/studio.js"></script>
+</body>
+</html>
+
+
+

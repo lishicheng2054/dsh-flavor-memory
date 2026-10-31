@@ -1,0 +1,82 @@
+{
+  "name": "dsh-flavor-memory",
+  "version": "0.4.2",
+  "description": "DSH / OpenAI-compatible flavor-preserving memory with SillyTavern character cards, retrieval-first worldbook, controlled evolution and a polished light-theme studio.",
+  "type": "module",
+  "main": "src/dsh-plugin.mjs",
+  "exports": {
+    ".": "./src/dsh-plugin.mjs",
+    "./client": "./src/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "ui",
+    "examples",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "TEST_REPORT.md",
+    "benchmark/blind/human-kit.mjs",
+    "benchmark/blind/tone-rubric-voice.json",
+    "CHANGELOG.md",
+    "assets/icon.svg",
+    "docs/store-listing.md",
+    "scripts/publish.mjs"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "test:stress": "node --import=./test/stress-env.mjs --test \"test/concurrency.test.mjs\"",
+    "gateway": "node src/server.mjs",
+    "studio": "node src/studio-server.mjs",
+    "setup": "node src/setup.mjs setup",
+    "doctor": "node src/setup.mjs doctor",
+    "pack:check": "npm pack --dry-run --json",
+    "blind:kit": "node benchmark/blind/human-kit.mjs",
+    "check": "node --check src/core.mjs && node --check src/gateway.mjs && node --check src/dsh-plugin.mjs && node --check src/setup.mjs && npm test",
+    "publish:check": "npm publish --dry-run",
+    "publish:now": "node scripts/publish.mjs"
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.0-rc.2 <0.3.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "memory",
+    "roleplay",
+    "sillytavern",
+    "character-card",
+    "context-compaction",
+    "openai-compatible"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible"
+      },
+      "note": "Tested with DSH 0.2.0-rc.2. Host tools, settings-section client, SillyTavern card import, retrieval-first character book, controlled personality evolution, raw-message archive and OpenAI-compatible gateway are covered by automated tests; the embedded settings console requires a Web-capable DSH profile."
+    }
+  },
+  "license": "MIT",
+  "bin": {
+    "dsh-flavor-memory-setup": "src/setup.mjs",
+    "dsh-flavor-memory-studio": "src/studio-server.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "icon": "assets/icon.svg"
+}
