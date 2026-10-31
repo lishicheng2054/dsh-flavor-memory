@@ -174,6 +174,24 @@ npx dsh-flavor-memory-setup setup --profile flavor-test --character-file example
 node .\node_modules\dsh-flavor-memory\src\setup.mjs setup --profile flavor-test --character-file examples/ayu.character.json --force
 ```
 
+### 1.0 从 npm 安装（最简单）
+
+插件页「添加插件」里直接填包名：
+
+```text
+dsh-flavor-memory
+```
+
+或者命令行：
+
+```powershell
+dsh plugin --profile flavor-test add dsh-flavor-memory
+```
+
+包主页：https://www.npmjs.com/package/dsh-flavor-memory
+
+当前版本 `0.4.3`，已实测：全新 profile 装完即可运行，`npm run doctor` 13 项全通过。
+
 ### 1.1 从 GitHub 安装（没有 npm 账号也能装）
 
 插件页「添加插件」接受三种来源，任选其一：
@@ -625,8 +643,9 @@ start benchmark\blind\human-kit\index.html
 - 上架材料：`docs/store-listing.md`（简介、配置、亮点、限制、截图位）。
 - 图标：`assets/icon.svg`。
 - 本地一键检查：`npm run check`。
+- npm：已发布 https://www.npmjs.com/package/dsh-flavor-memory （`latest = 0.4.3`），可直接按包名安装。
 - GitHub：仓库 https://github.com/lishicheng2054/dsh-flavor-memory ，Release `v0.4.3` 提供可直装 tgz。
-- npm（可选）：`npm run publish:check` 先 dry-run；有 npm 账号再执行 `npm run publish:now`。
+- 发布流程：`npm run publish:check` 先 dry-run；`npm run publish:now` 真正发布（npm 现在要求令牌带 Bypass 2FA，否则 403）。
 
 ## 参考
 
