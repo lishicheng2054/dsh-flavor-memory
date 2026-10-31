@@ -214,6 +214,8 @@ git+https://github.com/lishicheng2054/dsh-flavor-memory.git
 C:\Users\you\Downloads\dsh-flavor-memory-0.4.3.tgz
 ```
 
+> 中国大陆直连 `github.com` 可能被重置，下载卡住或报 `Connection was reset` 时挂代理重试，或者直接改用上面的 npm 安装方式（registry 国内可直连）。
+
 Release 页面：https://github.com/lishicheng2054/dsh-flavor-memory/releases
 
 校验值（SHA-256）：`FA3BA5F429E75B46C97A50E9A7DEF26595FAD022C0C8E31754A4009252965E9F`
@@ -645,7 +647,9 @@ start benchmark\blind\human-kit\index.html
 - 本地一键检查：`npm run check`。
 - npm：已发布 https://www.npmjs.com/package/dsh-flavor-memory （`latest = 0.4.3`），可直接按包名安装。
 - GitHub：仓库 https://github.com/lishicheng2054/dsh-flavor-memory ，Release `v0.4.3` 提供可直装 tgz。
-- 发布流程：`npm run publish:check` 先 dry-run；`npm run publish:now` 真正发布（npm 现在要求令牌带 Bypass 2FA，否则 403）。
+- 发布流程：`npm run publish:check` 先 dry-run；`npm run publish:now` 真正发布。
+- npm 发布的两个坑（2026 实测）：① 账号必须开 2FA，或使用勾了 **Bypass 2FA** 的 Granular Access Token，否则 `403 Two-factor authentication ... is required`；② npm 已废弃 TOTP（验证器 App），新账号只能加 Security key，所以走令牌最省事。
+- 发布后会先出现一个 `0.0.0-stage` 占位壳，属正常现象，几十秒后 `latest` 才会指向真实版本。
 
 ## 参考
 
