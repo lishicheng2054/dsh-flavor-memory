@@ -11,3 +11,4 @@ dist/
 *.tgz
 benchmark/blind/human-kit/
 ~
+.secrets/
