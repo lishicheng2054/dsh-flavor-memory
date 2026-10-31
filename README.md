@@ -174,6 +174,34 @@ npx dsh-flavor-memory-setup setup --profile flavor-test --character-file example
 node .\node_modules\dsh-flavor-memory\src\setup.mjs setup --profile flavor-test --character-file examples/ayu.character.json --force
 ```
 
+### 1.1 从 GitHub 安装（没有 npm 账号也能装）
+
+插件页「添加插件」接受三种来源，任选其一：
+
+**A. Release 直链（最省事，粘这一行）**
+
+```text
+https://github.com/lishicheng2054/dsh-flavor-memory/releases/download/v0.4.2/dsh-flavor-memory-0.4.2.tgz
+```
+
+**B. Git 地址**
+
+```text
+git+https://github.com/lishicheng2054/dsh-flavor-memory.git
+```
+
+**C. 本地 tgz（先下载再填绝对路径）**
+
+```text
+C:\Users\you\Downloads\dsh-flavor-memory-0.4.2.tgz
+```
+
+Release 页面：https://github.com/lishicheng2054/dsh-flavor-memory/releases
+
+校验值（SHA-256）：`18263F434E2065D325A65CBD0E39F503B9A44D430E0EA3FF0EF5A24DFC92E9EC`
+
+装完后仍按下面的「2. 配置角色」写人格配置；或直接跑 `npm run setup` 自动生成。
+
 ### 2. 配置角色
 
 在 profile 自己的 `cordis.patch.yml` 里覆盖同 id 的配置。注意 DSH 的 config 是**整块替换**，不是深合并，所以要把字段写全：
@@ -597,7 +625,8 @@ start benchmark\blind\human-kit\index.html
 - 上架材料：`docs/store-listing.md`（简介、配置、亮点、限制、截图位）。
 - 图标：`assets/icon.svg`。
 - 本地一键检查：`npm run check`。
-- 发布：`npm run publish:check` 先 dry-run；`npm login` 后执行 `npm run publish:now`。
+- GitHub：仓库 https://github.com/lishicheng2054/dsh-flavor-memory ，Release `v0.4.2` 提供可直装 tgz。
+- npm（可选）：`npm run publish:check` 先 dry-run；有 npm 账号再执行 `npm run publish:now`。
 
 ## 参考
 
